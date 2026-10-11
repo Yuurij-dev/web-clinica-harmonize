@@ -19,9 +19,11 @@ Defina `NEXT_PUBLIC_HARMONIZE_APP_URL` com a origem pública da aplicação loga
 NEXT_PUBLIC_HARMONIZE_APP_URL=https://seu-app.exemplo.com
 ```
 
+Os links legais do rodapé ficam disponíveis quando `NEXT_PUBLIC_TERMS_URL` e `NEXT_PUBLIC_PRIVACY_URL` forem definidos. Sem esses endereços, o rodapé mostra os documentos como em preparação.
+
 O aplicativo atual apresenta o cadastro de teste na página de login. Por isso, os botões de teste apontam para `/login`, onde a pessoa pode escolher **Crie sua conta grátis**. O teste disponível no app dura 3 dias.
 
-Os textos de planos são ilustrativos e não estabelecem preços ou direitos de acesso. Substitua-os pelos dados comerciais oficiais antes de publicar a oferta.
+Os nomes dos planos e sua apresentação são ilustrativos; recursos, preços e direitos de acesso não são atribuídos a nenhum plano. Substitua-os pelos dados comerciais oficiais antes de publicar a oferta.
 
 ## Verificação
 

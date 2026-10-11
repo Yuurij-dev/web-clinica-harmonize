@@ -6,7 +6,10 @@ const questions = [
   { question: "Preciso instalar algum programa?", answer: "Não. O Harmonize+ funciona no navegador, em computadores, tablets e celulares com acesso à internet." },
   { question: "Consigo acompanhar orçamentos e pagamentos?", answer: "Sim. O sistema permite criar e acompanhar orçamentos, registrar pagamentos e consultar informações financeiras da clínica." },
   { question: "O sistema também controla estoque?", answer: "Sim. Você pode acompanhar materiais, movimentações e saldos para planejar reposições com mais clareza." },
-  { question: "Como descubro qual plano é o ideal?", answer: "Os detalhes comerciais de cada plano são definidos na contratação. Comece pelo teste gratuito para conhecer a plataforma e avaliar o que sua clínica precisa." },
+  { question: "Como funciona o suporte?", answer: "Os canais e horários de suporte ainda não estão descritos nesta página. Confirme essas condições antes da contratação." },
+  { question: "Como os dados da clínica são tratados?", answer: "Consulte os documentos oficiais de privacidade e segurança antes de inserir informações reais. Esta página não define práticas de tratamento ou armazenamento de dados." },
+  { question: "Quais são os valores e as condições de contratação?", answer: "Os preços, recursos por plano e condições comerciais ainda não foram publicados. As opções apresentadas nesta página são uma estrutura visual e não representam direitos de acesso." },
+  { question: "O que acontece ao final do teste grátis?", answer: "O período de teste disponível no sistema é de 3 dias. A continuidade do acesso e as condições após esse período precisam ser confirmadas antes da contratação." },
 ];
 
 export function FAQ() {

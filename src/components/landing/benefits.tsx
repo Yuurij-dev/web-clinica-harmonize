@@ -1,9 +1,9 @@
-import { ArrowUpRight, Focus, HeartHandshake, Workflow } from "lucide-react";
+import { ArrowUpRight, BarChart3, CalendarCheck, ClipboardCheck } from "lucide-react";
 
 const benefits = [
-  { icon: Workflow, number: "01", title: "Tudo conectado", description: "Da agenda ao pagamento, acompanhe a jornada do cliente sem perder o contexto." },
-  { icon: Focus, number: "02", title: "Clareza para decidir", description: "Visualize a operação e os resultados com informações reunidas em um só lugar." },
-  { icon: HeartHandshake, number: "03", title: "Mais tempo para cuidar", description: "Organize os processos da clínica e dedique sua atenção ao atendimento." },
+  { icon: CalendarCheck, number: "01", title: "Agenda sem desencontros", description: "Veja horários e retornos do dia numa agenda só, com a disponibilidade da equipe à vista." },
+  { icon: ClipboardCheck, number: "02", title: "Atendimento com contexto", description: "Encontre cadastro, procedimentos e histórico no mesmo percurso do cliente." },
+  { icon: BarChart3, number: "03", title: "Gestão acompanhada", description: "Acompanhe orçamentos, pagamentos e estoque para saber o que pede atenção." },
 ];
 
 export function Benefits() {

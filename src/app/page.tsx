@@ -7,8 +7,8 @@ import { Plans } from "@/components/landing/plans";
 import { FAQ } from "@/components/landing/faq";
 import { FinalCTA } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
-import { appLoginUrl } from "@/lib/links";
+import { appLoginUrl, appSignupUrl } from "@/lib/links";
 
 export default function Home() {
-  return <><SiteHeader appLoginUrl={appLoginUrl} /><main><Hero appLoginUrl={appLoginUrl} /><Benefits /><Features /><Inside /><Plans appLoginUrl={appLoginUrl} /><FAQ /><FinalCTA appLoginUrl={appLoginUrl} /></main><Footer appLoginUrl={appLoginUrl} /></>;
+  return <><SiteHeader appLoginUrl={appLoginUrl} appSignupUrl={appSignupUrl} /><main><Hero appSignupUrl={appSignupUrl} /><Benefits /><Features /><Inside /><Plans appSignupUrl={appSignupUrl} /><FAQ /><FinalCTA appSignupUrl={appSignupUrl} /></main><Footer appLoginUrl={appLoginUrl} appSignupUrl={appSignupUrl} /></>;
 }

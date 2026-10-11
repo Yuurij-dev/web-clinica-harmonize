@@ -25,10 +25,10 @@ export function Inside() {
   return <section className="section-space overflow-hidden bg-white" id="sistema">
     <div className="page-container">
       <div className="section-heading reveal"><p className="eyebrow">VEJA O SISTEMA POR DENTRO</p><h2>Um espaço de trabalho<br />feito para a sua rotina.</h2><p>Navegue por algumas áreas do Harmonize+.</p></div>
-      <div aria-label="Áreas do sistema" className="inside-tabs" role="tablist">{views.map(({ key, label, icon: Icon }, index) => <button aria-controls="preview-panel" aria-selected={active === key} className={active === key ? "active" : ""} id={`tab-${key}`} key={key} onClick={() => setActive(key)} onKeyDown={(event) => handleTabKeyDown(event, index)} role="tab" tabIndex={active === key ? 0 : -1} type="button"><Icon size={17} />{label}</button>)}</div>
-      <div aria-labelledby={`tab-${active}`} className="inside-layout" id="preview-panel" role="tabpanel">
-        <div className="inside-preview"><ProductPreview view={active} /></div>
-        <div className="inside-copy" key={active}><span className="inside-index">0{views.findIndex((view) => view.key === active) + 1} / 03</span><h3>{current.title}</h3><p>{current.description}</p><span className="inside-rule" /><span className="inside-tag">Harmonize+ em ação</span></div>
+      <div aria-label="Áreas do sistema" aria-orientation="horizontal" className="inside-tabs" role="tablist">{views.map(({ key, label, icon: Icon }, index) => <button aria-controls="preview-panel" aria-selected={active === key} className={active === key ? "active" : ""} id={`tab-${key}`} key={key} onClick={() => setActive(key)} onKeyDown={(event) => handleTabKeyDown(event, index)} role="tab" tabIndex={active === key ? 0 : -1} type="button"><Icon aria-hidden="true" size={17} />{label}</button>)}</div>
+      <div aria-labelledby={`tab-${active}`} aria-live="polite" className="inside-layout" id="preview-panel" role="tabpanel" tabIndex={0}>
+        <div className="inside-preview" key={`preview-${active}`}><ProductPreview view={active} /></div>
+        <div className="inside-copy" key={`copy-${active}`}><span className="inside-index">0{views.findIndex((view) => view.key === active) + 1} / 03</span><h3>{current.title}</h3><p>{current.description}</p><span className="inside-rule" /><span className="inside-tag">Harmonize+ em ação</span></div>
       </div>
       <p className="inside-disclaimer">Telas demonstrativas com dados fictícios.</p>
     </div>

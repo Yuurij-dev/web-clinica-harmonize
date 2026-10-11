@@ -13,7 +13,7 @@ const navigation = [
   { href: "#faq", label: "Dúvidas" },
 ];
 
-export function SiteHeader({ appLoginUrl }: { appLoginUrl: string }) {
+export function SiteHeader({ appLoginUrl, appSignupUrl }: { appLoginUrl: string; appSignupUrl: string }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return <header className="site-header fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-white/95 backdrop-blur-xl">
@@ -24,7 +24,7 @@ export function SiteHeader({ appLoginUrl }: { appLoginUrl: string }) {
       </nav>
       <div className="hidden items-center gap-4 lg:flex">
         <a className="text-[13px] font-semibold text-foreground transition-colors hover:text-primary" href={appLoginUrl}>Entrar</a>
-        <Button asChild size="sm"><a href={appLoginUrl}>Teste grátis <ArrowUpRight /></a></Button>
+        <Button asChild size="sm"><a href={appSignupUrl}>Teste grátis <ArrowUpRight /></a></Button>
       </div>
       <button aria-controls="mobile-menu" aria-expanded={menuOpen} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} className="grid size-10 place-items-center rounded-md text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden" onClick={() => setMenuOpen((open) => !open)} type="button">
         {menuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
@@ -32,7 +32,7 @@ export function SiteHeader({ appLoginUrl }: { appLoginUrl: string }) {
     </div>
     {menuOpen ? <nav aria-label="Navegação móvel" className="border-t border-border bg-white px-6 pb-6 pt-2 lg:hidden" id="mobile-menu">
       {navigation.map((item) => <a className="block border-b border-border py-3 text-sm font-medium text-foreground" href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>)}
-      <div className="mt-5 flex items-center gap-3"><Button asChild className="flex-1 px-3 text-xs" variant="outline"><a href={appLoginUrl}>Entrar</a></Button><Button asChild className="flex-1 px-3 text-xs"><a href={appLoginUrl}>Teste grátis</a></Button></div>
+      <div className="mt-5 flex items-center gap-3"><Button asChild className="flex-1 px-3 text-xs" variant="outline"><a href={appLoginUrl}>Entrar</a></Button><Button asChild className="flex-1 px-3 text-xs"><a href={appSignupUrl}>Teste grátis</a></Button></div>
     </nav> : null}
   </header>;
 }

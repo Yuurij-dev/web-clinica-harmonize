@@ -24,7 +24,7 @@ export function ProductPreview({ view = "agenda", compact = false }: { view?: Pr
       <div className="preview-sidebar-bottom"><Settings2 size={14} /> Configurações</div>
     </aside>
     <div className="preview-main">
-      <div className="preview-topbar"><span className="preview-crumb">Clínica Essência <ChevronDown size={12} /></span><span className="preview-search"><Search size={13} /> Buscar no Harmonize+</span><span className="preview-avatar">CE</span></div>
+      <div className="preview-topbar"><span className="preview-crumb">Clínica demonstrativa <ChevronDown size={12} /></span><span className="preview-search"><Search size={13} /> Buscar no Harmonize+</span><span aria-hidden="true" className="preview-avatar">CD</span></div>
       {view === "agenda" ? <AgendaPreview /> : view === "financeiro" ? <FinancePreview /> : <StockPreview />}
     </div>
   </div>;
@@ -36,11 +36,11 @@ function PreviewHeading({ label, title, action }: { label: string; title: string
 
 function AgendaPreview() {
   const days = [
-    { day: "SEG", date: "18", items: [{ time: "09:00", title: "Avaliação inicial", name: "Ana M.", kind: "purple" }, { time: "14:30", title: "Retorno", name: "Carla R.", kind: "mint" }] },
-    { day: "TER", date: "19", items: [{ time: "10:30", title: "Procedimento", name: "Marina L.", kind: "mint" }] },
-    { day: "QUA", date: "20", items: [{ time: "08:30", title: "Consulta", name: "Beatriz S.", kind: "peach" }, { time: "15:00", title: "Avaliação inicial", name: "Juliana P.", kind: "purple" }] },
-    { day: "QUI", date: "21", items: [{ time: "11:00", title: "Procedimento", name: "Renata C.", kind: "mint" }] },
-    { day: "SEX", date: "22", items: [{ time: "09:30", title: "Retorno", name: "Fernanda A.", kind: "peach" }] },
+    { day: "SEG", date: "18", items: [{ time: "09:00", title: "Avaliação inicial", name: "Cliente 01", kind: "purple" }, { time: "14:30", title: "Retorno", name: "Cliente 02", kind: "mint" }] },
+    { day: "TER", date: "19", items: [{ time: "10:30", title: "Procedimento", name: "Cliente 03", kind: "mint" }] },
+    { day: "QUA", date: "20", items: [{ time: "08:30", title: "Consulta", name: "Cliente 04", kind: "peach" }, { time: "15:00", title: "Avaliação inicial", name: "Cliente 05", kind: "purple" }] },
+    { day: "QUI", date: "21", items: [{ time: "11:00", title: "Procedimento", name: "Cliente 06", kind: "mint" }] },
+    { day: "SEX", date: "22", items: [{ time: "09:30", title: "Retorno", name: "Cliente 07", kind: "peach" }] },
   ];
 
   return <div className="preview-content">
